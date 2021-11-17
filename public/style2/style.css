@@ -1,0 +1,351 @@
+body {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 30px;
+}
+h1 {
+    border-bottom: rgb(175, 166, 166 , 0.4) 1px solid;
+    padding-bottom: 22px;
+    font-weight: bolder;
+    font-family:sans-serif;
+}
+
+@media  (min-width:500px) {
+figure {
+    transform: rotate(-18deg);
+    position: absolute;
+    top: 70px;
+    right: 70px;
+    max-width: 100%;
+}
+#about {
+    margin-right: 18%;
+}
+.experience-type {
+color: rgb(27, 175, 27) ;
+font-size: small;
+}
+.experience-details{
+    opacity: 0.5;
+    font-size: small;
+}
+.experience-institution {
+    display: none;
+}
+h2 {
+    display: none;
+}
+#about h3 {
+    display: none;
+}
+h3 {
+    font-style: italic;
+    font-weight: bolder;
+}
+#about {
+    opacity: 0.5;
+}
+/* Here Start the competencies Grid */
+
+#competencies {
+    display: grid;
+grid-template-columns: repeat(12, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+#competencies h3 { grid-column: 1/2;margin-right: 4px; }
+.skills-primary { grid-column: 2/13;}
+.skills-secondary { grid-column: 2/13;}
+
+/* Here End the competencies Grid */
+
+/* Here Start the experiences Grid */
+
+#experiences {
+    display: grid;
+grid-template-columns: repeat(12, 1fr);
+grid-column-gap: 5px;
+grid-row-gap: 5px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.experience {grid-column: 2/13;}
+#experiences h3 { grid-column: 1/2; }
+#experiences h4 { grid-column: 2/8; display: inline;}
+.experience-details {grid-column: 8/13; float: right;}
+.experiences p { grid-column: 2/13;}
+.experience {
+    border-left: solid 1px black;
+    padding-left: 7px;
+}
+#experiences h3 {
+    margin-right: 13px;
+}
+
+/* Here End the experiences Grid */
+
+/* Here Start the education Grid */
+
+
+#education {
+    display: grid;
+grid-template-columns: repeat(12, 1fr);
+grid-column-gap: 5px;
+grid-row-gap: 5px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.education {grid-column: 2/13;}
+#education h3 { grid-column: 1/2; }
+#education h4 { grid-column: 2/8; display: inline;}
+.experience-details {grid-column: 8/13; float: right;}
+.experiences p { grid-column: 2/13;}
+.experience {
+    border-left: solid 1px black;
+    padding-left: 7px;
+}
+#education h3 {
+    margin-right: 28px;
+}
+
+/* Here End the education Grid */
+
+/* Here Start the hobbies Grid */
+
+#hobbies {
+    display: grid;
+grid-template-columns: repeat(12, 1fr);
+grid-column-gap: 5px;
+grid-row-gap: 5px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+#hobbies ul {
+    border-left: solid 1px black;
+    padding-left: 46px;
+    display: inline;
+}
+#hobbies ul { grid-column: 2/13;}
+#hobbies h3 {
+    margin-right: 44px;
+}
+
+/* Here End the education Grid */
+
+.skills {
+    padding-left: 20px;
+    border-left: black 1px solid;
+}
+.skill {
+    background-color: rgb(11, 100, 38);
+    width: 140px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+.skills-primary , .skills-secondary{
+    display: inline-flex;
+    
+}
+.skills-secondary {
+    font-size: x-small;
+}
+.skill span {
+    
+    padding: 10px;
+    color: honeydew;
+}
+.skills-primary .skill[data-skill='5']::after{
+    color: white;
+    content: "★★★";
+}
+.skills-primary .skill[data-skill='3']::after{
+    color: white;
+    content: "★★";
+}
+.skills-primary .skill[data-skill='1']::after{
+    color: white;
+    content: "★";
+}
+.skills-secondary .skill[data-skill='9']::after{
+    color: white;
+    content: "★★★★★";
+}
+.skills-secondary .skill[data-skill='5']::after{
+    color: white;
+    content: "★★★";
+}
+.skills-secondary .skill[data-skill='7']::after{
+    color: white;
+    content: "★★★★";
+}
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+#contact h3{
+display: none;
+}
+.contact-type{
+    display: none;
+}
+.contact-skype{
+    display: none;
+}
+
+.contact-phone a {
+    content: url(../images/phone.png);
+    width: 50px;
+    height: auto;
+    }
+.contact-email a {
+    content: url(../images/email.png);
+    width: 50px;
+    height: auto;
+    }
+.contact-facebook a {
+    content: url(../images/facebook.png);
+    width: 50px;
+    height: auto;
+    }
+.contact-github a {
+    content: url(../images/github.png);
+    width: 50px;
+    height: auto;
+    }
+}
+
+@media (max-width:499px) {
+    figure {
+        display: none;
+    }
+    h2 {
+        display: none;
+    }
+    #about h3 {
+        display: none;
+    }
+    
+    .skill {
+        background-color: rgb(11, 100, 38);
+        margin-bottom: 10px;
+    }
+    
+    #education h4{
+        display: inline;
+    }
+    #experiences h4{
+        display: inline;
+    }
+    .experience-details{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .skills-primary , .skills-secondary{
+        display: flex;
+    }
+    .skills-secondary {
+        font-size: x-small;
+    }
+    .skill span {
+        padding: 10px;
+        color: honeydew;
+    }
+    .skills-primary .skill[data-skill='5']::after{
+        color: white;
+        content: "★★★";
+    }
+    .skills-primary .skill[data-skill='3']::after{
+        color: white;
+        content: "★★";
+    }
+    .skills-primary .skill[data-skill='1']::after{
+        color: white;
+        content: "★";
+    }
+    .skills-secondary .skill[data-skill='9']::after{
+        color: white;
+        content: "★★★★★";
+    }
+    .skills-secondary .skill[data-skill='5']::after{
+        color: white;
+        content: "★★★";
+    }
+    .skills-secondary .skill[data-skill='7']::after{
+        color: white;
+        content: "★★★★";
+    }
+    .contacts {
+        display: flex;
+        
+    }
+    #contact h3{
+    display: none;
+    }
+    .contact-type{
+        display: none;
+    }
+    .contact-skype{
+        display: none;
+    }
+    
+    .contact-phone a {
+        content: url(../images/phone.png);
+        width: 30px;
+        height: auto;
+        }
+    .contact-email a {
+        content: url(../images/email.png);
+        width: 30px;
+        height: auto;
+        }
+    .contact-facebook a {
+        content: url(../images/facebook.png);
+        width: 30px;
+        height: auto;
+        }
+    .contact-github a {
+        content: url(../images/github.png);
+        width: 30px;
+        height: auto;
+        }
+.experience-type {
+color: rgb(27, 175, 27) ;
+font-size: small;
+}
+.experience-details{
+    opacity: 0.5;
+    font-size: small;
+}
+.experience-institution {
+    display: none;
+}
+h2 {
+    display: none;
+}
+#about h3 {
+    display: none;
+}
+h3 {
+    font-style: italic;
+    font-weight: bolder;
+}
+#about {
+    opacity: 0.5;
+}
+h3 {
+    border-bottom: solid 1px black;
+margin-right: 60%;
+}
+h1 {
+    border-bottom: solid 1px black;
+
+}
+#about p{
+    margin-bottom: 80px;
+}
+
+}
