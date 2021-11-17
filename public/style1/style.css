@@ -1,0 +1,163 @@
+@media only screen and (min-width : 720px) {
+      body {
+          background-color: white;
+      }
+      header{
+       width: 100%;
+       background-color: grey;
+      }
+    header div {
+        display: flex;
+    }
+    h3 {
+        border-bottom: 1px solid grey;
+        padding-bottom: 15px;
+    }
+    h3{
+        position: relative;
+        margin-left: 20px;
+        display: flex;
+    }
+    h3::before{
+        content: "•";
+        color: red;
+        display: inline-block;
+        width: 10px;
+        margin-left: -1em;
+        font-size: 20px;
+    }
+    .content {
+        display: grid;
+        column-gap: 2%;
+        padding-left: 10%;
+        padding-right: 10%;
+        grid-template-areas: "header contact" "about competencies" "experiences education" "hobbies ." ;
+    }
+    #about {
+        grid-area: about;
+    }
+    #competencies {
+        grid-area: competencies;
+    }
+    #experiences {
+        grid-area: experiences;
+    }
+    #education {
+        grid-area: education;
+    }
+    #hobbies {
+        grid-area: hobbies;
+    }
+    #contact{
+        position: absolute;
+        top: 16px;        
+        right: 0;
+        left: 50%;
+        
+    }
+    .contact{
+        display: flex;
+        margin: 0%;
+        flex-direction: row;
+        
+
+    }
+    
+    #contact h3 {
+        display: none;
+    }
+    dt{
+        background-color: red;
+        color: white;
+        width:110px;
+    }
+    dd {
+        background-color: black;
+        color: red;
+        display: flex;
+        margin-left: 0px;
+        width: 430px;
+        
+    }
+    a {
+        background-color: black;
+        color: red;
+        text-decoration: none;
+    }
+    
+    h1 , h2 {
+        color: red;
+        margin-left: 100px;
+    }
+    .experience-type {
+        color: red;
+        font-weight: 900;
+    }
+    .experience-institution {
+        color: red;
+        font-weight: 500;
+    }
+    .experience-institution::before{
+        content: "@";
+    }
+    .experience-location , .experience-date {
+        padding-left: 10px;
+        opacity: 0.5;
+    }
+    .skill{
+        color:white;
+        margin-bottom:3px;
+        background-color: #ccc;
+        border: 4px solid #ccc;
+    }
+    .skills-primary::before{
+        content: "Main";
+    }
+    .skills-secondary::before{
+        content: "Other";
+    }
+    .skills-primary .skill:nth-child(1) span{
+        padding:5px;
+        width: 50%;
+        background-color:red;
+        display: block;
+    }
+    .skills-primary .skill:nth-child(2) span{
+        padding:5px;
+        width: 30%;
+        background-color:red;
+        display: block;
+    }
+    .skills-primary .skill:nth-child(3) span{
+        padding:5px;
+        width: 10%;
+        background-color:red;
+        display: block; 
+    }
+
+    /* Note: I did the "Main" skills percentage bar in a diff way than the "Other" Skills bar just so i can try and learn both ways*/
+
+    .skills-secondary [data-skill="9"]>span {
+    width: 90%;
+    background-color: red;
+    display: inline-block;
+    padding: 5px;
+    opacity: 0.5;
+    }
+    .skills-secondary [data-skill="5"]>span {
+    width: 50%;
+    background-color: red;
+    display: inline-block;
+    padding: 5px;
+    opacity: 0.5;
+    }
+    .skills-secondary [data-skill="7"]>span {
+    width: 70%;
+    background-color: red;
+    display: inline-block;
+    padding: 5px;
+    opacity: 0.5;
+    }
+
+
+}
